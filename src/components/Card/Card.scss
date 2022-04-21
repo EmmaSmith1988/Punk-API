@@ -1,0 +1,26 @@
+.card {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
+  &__image {
+    width: min-content;
+    height: 220px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+  }
+  &__info {
+    font-size: 12px;
+    font-style: italic;
+  }
+  &__content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    // I want to make the size of content bigger to match the longest description
+    justify-content: space-between;
+  }
+  &__heading {
+    font-size: 25px;
+  }
+}

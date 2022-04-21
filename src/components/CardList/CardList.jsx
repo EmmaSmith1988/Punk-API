@@ -1,0 +1,19 @@
+import React from 'react'
+import Card from '../Card/Card'
+import beers from '../../data/data'
+import './CardList.scss'
+
+const CardList = ({beersArr}) => {
+  const beerCardJSX = beersArr.map(beer => {
+    return <Card key={beer.id} name={beer.name} description={beer.description} abv={beer.abv} image={beer.image_url} />
+  })
+
+
+  return (
+    <div className='cardList'>
+      {beerCardJSX}
+    </div>
+  )
+}
+
+export default CardList
