@@ -17,7 +17,6 @@ function App() {
         })
   }, [])
 
-  console.log(beersArr);
 
   const handleInput =  (event) => {
     const input = event.target.value.toLowerCase();
@@ -32,7 +31,6 @@ function App() {
     }
   }
 
-  console.log(filterTerm);
 
   return (
     <div>

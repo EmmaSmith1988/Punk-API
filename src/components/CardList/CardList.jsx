@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../Card/Card'
-import beers from '../../data/data'
 import './CardList.scss'
 
 const CardList = ({beersArr}) => {
