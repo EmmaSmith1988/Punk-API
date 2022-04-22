@@ -2,13 +2,14 @@ import React from 'react'
 import CardList from '../CardList/CardList'
 import beers from '../../data/data'
 
-const Main = ({searchTerm, filterTerm}) => {
-
-  const searchedBeers = beers.filter(beer => {
-    return beer.name.toLowerCase().includes(searchTerm) && beer.image_url;
+const Main = ({searchTerm, filterTerm, beersArr}) => {
+  
+  console.log(typeof(beersArr))
+  const searchedBeers = beersArr.filter(beer => {
+    return beer.name.toLowerCase().includes(searchTerm);
   })
 
-  const filteredBeers = beers.filter(beer => {
+  const filteredBeers = beersArr.filter(beer => {
     const yearBrewed = beer.first_brewed.split('/')[1]
     if (filterTerm == 'high-alcohol') {
       return beer.abv > 6;
@@ -20,8 +21,6 @@ const Main = ({searchTerm, filterTerm}) => {
       return beer;
     }
   })
-
-  console.log(filteredBeers);
 
   return (
     <div>
