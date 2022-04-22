@@ -4,12 +4,8 @@ import './CardList.scss'
 
 const CardList = ({beersArr}) => {
   const beerCardJSX = beersArr.map(beer => {
-    return <Card key={beer.id} name={beer.name} description={beer.description} abv={beer.abv} image={beer.image_url} />
+    return <Card key={beer.id} name={beer.name} description={beer.description} abv={beer.abv} image={beer.image_url} id={beer.id} />
   })
-
-  // const filteredBeerCardJSX = beersFiltered.map(beer => {
-  //   return <Card key={beer.id} name={beer.name} description={beer.description} abv={beer.abv} image={beer.image_url} />
-  // })
 
   return (
     <div className='cardList'>
