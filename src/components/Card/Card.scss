@@ -2,6 +2,7 @@
   border: 2px solid black;
   border-radius: 20px;
   width: 300px;
+  color: black;
   &__image {
     width: min-content;
     height: 220px;
@@ -23,4 +24,7 @@
   &__heading {
     font-size: 25px;
   }
+}
+a {
+  text-decoration: none;
 }
