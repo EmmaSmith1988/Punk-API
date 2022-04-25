@@ -1,0 +1,10 @@
+.search-box {
+  &__input {
+    border-radius: 20px;
+    border: 2px solid lightblue;
+    height: 44px;
+    width: 300px;
+    font-size: 16px;
+    margin: 20px;
+  }
+}

@@ -12,7 +12,7 @@ const CardInfo = ({beersArr}) => {
     <article className="card-info">
       <div className="card-info__left">
         <img src={singleBeer.image_url} alt="" className="card-info__image" />
-        <p className="card-info__abv">{singleBeer.abv}</p>
+        <p className="card-info__abv">{singleBeer.abv}%</p>
       </div>
       <div className="card-info__main">
         <h1 className="card-info__heading">{singleBeer.name}</h1>

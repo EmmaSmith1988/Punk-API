@@ -1,0 +1,12 @@
+.filter {
+  margin: 10px;
+  &__content {
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    
+
+  }
+}

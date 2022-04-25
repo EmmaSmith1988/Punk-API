@@ -10,40 +10,57 @@ import CardInfo from './components/CardInfo/CardInfo';
 function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterTerm, setFilterTerm] = useState("");
+  const [filterABV, setFilterABV] = useState('');
+  const [filterClassic, setFilterClassic] = useState('');
+  const [filterPH, setFilterPH] = useState(false);
   const [beersArr, setBeersArr] = useState([]);
 
   useEffect( () => {
-    fetch("https://api.punkapi.com/v2/beers?per_page=50")
+    fetch(`https://api.punkapi.com/v2/beers?per_page=80${filterABV}${filterClassic}`)
       .then(response => response.json())
       .then(userObjects => {
         setBeersArr([...userObjects]);
+        console.log('running fetch');
         })
-  }, [])
-
+  }, [filterABV, filterClassic])
 
   const handleInput =  (event) => {
     const input = event.target.value.toLowerCase();
     setSearchTerm(input)
   }
 
-  const handleFilter = (event) => {
+  const handleFilterABV = (event) => {
     if (event.target.checked){
-      setFilterTerm(event.target.id);
+      setFilterABV('&abv_gt=6');
     } else {
-      setFilterTerm("");
+      setFilterABV('');
     }
   }
 
+  const handleFilterClassic = (event) => {
+    if (event.target.checked){
+      setFilterClassic('&brewed_before=01-2010');
+    } else {
+      setFilterClassic('');
+    }
+  }
+
+  const handleFilterPH = (event) => {
+    if (event.target.checked){
+      setFilterPH(event.target.checked);
+    } else {
+      setFilterPH(false);
+    }
+  }
 
   return (
     <Router>
       <div>
-        <Navbar searchTerm={searchTerm} handleInput={handleInput} filterTerm={filterTerm} handleFilter={handleFilter}/>
+        <Navbar searchTerm={searchTerm} handleInput={handleInput} handleFilterABV={handleFilterABV} handleFilterClassic={handleFilterClassic} handleFilterPH={handleFilterPH}/>
         <Routes>
           <Route
             path='/'
-            element={<Main searchTerm={searchTerm} filterTerm={filterTerm} beersArr={beersArr}/>}
+            element={<Main searchTerm={searchTerm} filterPH={filterPH} beersArr={beersArr}/>}
           />        
           <Route
             path="/card/:cardId"
