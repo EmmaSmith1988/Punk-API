@@ -10,3 +10,13 @@
 
   }
 }
+
+@media screen and (max-width: 500px) {
+  .filter{
+   
+    &__content {
+      width: 300px;
+      margin: auto;
+    }
+  }
+}

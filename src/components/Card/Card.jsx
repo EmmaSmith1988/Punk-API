@@ -13,8 +13,6 @@ const Card = ({image, name, description, abv, id, first_brewed, ph}) => {
           <h3 className="card__heading">{name}</h3>
           <p className="card__info">{description}</p>
           <p className="card__strength">{abv}%</p>
-          <p>{first_brewed}</p>
-          <p>{ph}</p>
         </div>
       </section>
     </Link>

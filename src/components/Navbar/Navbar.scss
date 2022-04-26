@@ -11,3 +11,11 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .navbar{
+    &__search {
+      display: block;
+    }
+  }
+}

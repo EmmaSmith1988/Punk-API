@@ -20,7 +20,6 @@ function App() {
       .then(response => response.json())
       .then(userObjects => {
         setBeersArr([...userObjects]);
-        console.log('running fetch');
         })
   }, [filterABV, filterClassic])
 
