@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Main from './components/Main/Main';
 
 import {useState, useEffect} from 'react';
-import { HashRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import CardInfo from './components/CardInfo/CardInfo';
 
 function App() {
