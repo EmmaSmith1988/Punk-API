@@ -53,7 +53,7 @@ function App() {
   }
 
   return (
-    <Router>
+    
       <div>
         <Navbar searchTerm={searchTerm} handleInput={handleInput} handleFilterABV={handleFilterABV} handleFilterClassic={handleFilterClassic} handleFilterPH={handleFilterPH}/>
         <Routes>
@@ -67,7 +67,7 @@ function App() {
             />
         </Routes>
       </div>
-    </Router>
+   
   );
 }
 
