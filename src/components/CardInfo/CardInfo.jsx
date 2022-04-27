@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom'
 
 const CardInfo = ({beersArr}) => {
   const {cardId} = useParams();
-  const singleBeer = beersArr.find(x => x.id == cardId)
+  const singleBeer = beersArr.find(x => parseInt(x.id) === parseInt(cardId))
   const food_pairingsJSX = singleBeer.food_pairing.map(pairing => {
     return <li key={pairing}>{pairing}</li>
   })
   return (
     <article className="card-info">
       <div className="card-info__left">
-        <img src={singleBeer.image_url} alt="" className="card-info__image" />
+        <img src={singleBeer.image_url} alt="beer" className="card-info__image" />
         <p className="card-info__abv">ABV {singleBeer.abv}%</p>
       </div>
       <div className="card-info__main">

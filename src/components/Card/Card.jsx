@@ -7,7 +7,7 @@ const Card = ({image, name, description, abv, id, first_brewed, ph}) => {
     <Link to={`/card/${id}`}>
       <section className="card">
         <div className="card__imagediv">
-          <img src={image} alt="" className="card__image" />
+          <img src={image} alt="beer" className="card__image" />
         </div>
         <div className="card__content">
           <h3 className="card__heading">{name}</h3>

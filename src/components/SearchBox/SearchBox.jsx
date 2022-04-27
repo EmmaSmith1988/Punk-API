@@ -1,6 +1,5 @@
 import React from 'react'
 import './SearchBox.scss'
-import magnifyingGlass from '../../assets/search.png'
 
 const SearchBox = ({searchTerm, handleInput}) => {
   return (
@@ -11,5 +10,3 @@ const SearchBox = ({searchTerm, handleInput}) => {
 }
 
 export default SearchBox
-
-{/* <img src={magnifyingGlass} alt="" /> */}

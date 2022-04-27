@@ -10,7 +10,7 @@ const Navbar = ({searchTerm, handleInput, handleFilterABV, handleFilterClassic, 
   return (
     <div className='navbar'>
       <Link to='/'>
-        <img className="navbar__title" src={heading}></img>
+        <img className="navbar__title" alt='Brewdog logo' src={heading}></img>
       </Link>
       <div className="navbar__search">
         <SearchBox searchTerm={searchTerm} handleInput={handleInput}/>
